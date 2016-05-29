@@ -1,41 +1,38 @@
 :banner: banners/build_a_theme.jpg
 
 =====================
-Theme Tutorial
+Tutorial Temas Web
 =====================
 
 .. rst-class:: lead
 
-Odoo celebrates freedom. Freedom for the designer to go further and
-freedom for the user to customize everything according to their needs.
+Odoo celebra la libertad. Libertad para el diseñador para ir más allá y
+libertad para el usuario personalizar todo de acuerdo a sus necesidades.
 
-Ready to create your own theme? Great. Here are some things you should know before you begin. This tutorial is a guide to creating an Odoo theme.
+Listo para crear tu propio tema? Estupendo. Aquí hay algunas cosas que debes saber antes de empezar. Este tutorial es una guía para la creación de un tema Odoo.
 
 .. image:: theme_tutorial_assets/img/Intro.jpg
 
 
-An introduction for web designers
+Una introducción para los diseñadores web
 =================================
 
-If you are a web designer using Odoo for the first time, you are in the right place.
-This introduction will outline the basics of Odoo theme creation.
+Si eres es un diseñador de páginas web utilizando Odoo por primera vez, estás en el lugar correcto.  Esta introducción esbozarán los fundamentos de la creación de temas Web Odoo.
 
-.. note::
+.. Nota::
 
-   Odoo’s team has created a framework that’s powerful and easy to use. There’s no need to know special syntaxes to use this set of tools.
+El equipo de Openerp ha creado un marco de gran capacidad fácil de usar. No hay necesidad de conocer sintaxis especiales para poder usar este conjunto de herramientas.
 
-From common CMS to Odoo
+De CMS (content management system) a Odoo
 -----------------------
 
-.. note::
-
-   If you always think and work in the same way, you’ll probably get the same results. If you want something completely new,  then try something different.
-
+Nota Si se piensa trabajar de la misma manera siempre , es probable que obtengas los mismos resultados siempre. Si quieres algo completamente nuevo, a continuación, probaras algo diferente.
 ..
 
-    Where is my header.php file?
+    ¿Dónde está mi archivo header.php?
 
-This is usually the first question from a web designer used to working with Wordpress or Joomla and coming to Odoo for the first time.
+
+Esta suele ser la primera pregunta de un diseñador de páginas web que ha trabajado en  Wordpress o Joomla al venir a Odoo por primera vez.
 
 .. container:: col-sm-4
 
@@ -43,27 +40,25 @@ This is usually the first question from a web designer used to working with Word
 
 .. container:: col-sm-7
 
-  Indeed, when using common CMSs, you have to code several files (like header.php, page.php, post.php, etc.) in order to create a basic structure for your website. With those systems, this base structure acts as a design foundation that you have to update over time to ensure compatibility within your CMS. So, even after you have spent hours coding the files, you have not even started on the design yet.
+  De hecho, cuando se utiliza un CMS común, tiene que codificar varios archivos (como header.php, page.php, post.php, etc.) con el fin de crear una estructura básica para tu sitio web. Con estos sistemas, esta estructura actúa como una base de diseño que tienes que actualizar en el tiempo para asegurar la compatibilidad dentro de tu CMS. Por lo tanto, incluso después de haber pasado horas de codificación de los archivos, ni siquiera empezas a trabajar en el diseño todavía.
 
-  This **does not** apply to creating Odoo themes.
+  Esto no se aplica a la creación de temas Odoo.
 
 
-.. note::
+.. Nota::
    :class: col-sm-12
 
-   We think that theme design should be simple (and powerful). When we created our Website Builder, we decided to start from scratch instead of relying on what already existed. This approach gave us the freedom to focus on the things that are really important for designers: styles, content and the logic behind them. No more struggling with technical stuff.
-
-Odoo default theme structure
+  Creemos que el tema de diseño debe ser simple (y poderoso). Cuando creamos nuestro Website Constructor, decidimos empezar desde cero en lugar de depender de lo que ya existía. Este enfoque nos dio la libertad para centrarns en las cosas que son realmente importantes para los diseñadores: los estilos los contenidos y la lógica detrás de ellos. No más  luchas con cuestiones técnicas.
+  
+Odoo estructura del tema por defecto
 ----------------------------
 
 .. container:: col-sm-8
 
-  Odoo comes with a default theme structure.
-  It is a very basic “theme” that provides minimal structure and layout. When you create a new theme, you are actually extending this.
-  Indeed it’s always enabled in your setup and it acts exactly like the CMS’s base structure we mentioned above, except that you don’t have to create or maintain it.
-  It will upgrade automatically within your Odoo installation and, since it is included in the Website Builder module, everything is smoothly integrated by default.
+  Odoo viene con una estructura de tema por defecto.
+  
+  Se trata de un 'tema' muy básico que proporciona la estructura y el diseño mínimos. Al crear un nuevo tema, en realidad se está extendiendo esto. De hecho, siempre esta habilitado en su configuración y actúa exactamente como estructura de base del CMS que hemos mencionado anteriormente, excepto que usted no tiene que crearlo o mantenerlo. Se actualizará automáticamente dentro de la instalación de Odoo, ya que está incluido en el módulo Editor web, todo está integrado sin problemas por defecto.
 
-  As a result, you are totally free to focus on design while this structure does the job of providing integrations and functionality.
 
 .. container:: col-sm-4
 
@@ -71,53 +66,53 @@ Odoo default theme structure
 
 .. container:: col-md-6
 
-   **Main features:**
+   **Principales características:**
 
-   * Basic layouts for pages, blog and eCommerce
-   * Website Builder integration
-   * Basic Snippets
-   * Automatic Less/Sass compiling
-   * Automatic Js and CSS minification and combination
+   * configuraciones básicas de páginas , blogs y comercio electrónico.
+   * Integracion con el Website Builder
+   * Snippets basicos.
+   * Compilacion automatica Less/Sass
+   * Minificación y combinación Js y CSS automaticos
 
 .. container:: col-md-6
 
-   **Main technologies:**
+   **Principales Tecnologias:**
 
    * Twitter Bootstrap
    * jQuery
    * jQuery UI
    * underscore.js
-
-Thinking "modular"
+   
+Piensa "modular"
 ==================
 
-An Odoo theme is not a folder containing HTML or PHP files, it’s a modular framework written in XML. Never worked with XML files before? Don’t worry, after following the tutorial, you’ll be able to create your first theme with only basic knowledge of HTML.
+Un tema Odoo no es una carpeta que contiene los archivos HTML o PHP, es un framework modular escrito en XML. Nunca has trabajado con archivos XML antes? No te preocupes, después de seguir el tutorial, serás capaz de crear tu primer tema con sólo un conocimiento básico de HTML.
 
-Using classical web design workflows, you usually code the layout of the entire page. The result of this is a “static” web page. You can update the content, of course, but your client will need you to work on making even basic changes.
+Usando flujos de trabajo clásicos de diseño web, por lo general, codificamos el diseño de la página entera. El resultado de esto es una página web 'estática'. Puede actualizar el contenido, por supuesto, pero su cliente va a necesitar que le permita trabajar en hacer cambios básicos.
 
-Creating themes for Odoo is a total change of perspective. Instead of defining the complete layout for a page, you can create blocks (snippets) at let the user choose where to “drag&drop” them, creating the page layout on their own.
-We call this modular design.
+Crear temas para Odoo es un cambio total de perspectiva. En vez de definir el diseño completo de una página, puede crear bloques (snippets) para permitir al usuario elegir dónde 'arrastrarlos y soltarlos', creando el diseño de página por su cuenta.
+Llamamos a este diseño modular.
 
-Imagine an Odoo theme as a “list” of elements and options that you have to create and style.
-As a designer, your goal is to style these elements in order to achieve a wonderful result, regardless of where the end user chooses to place them.
+Imagínese un tema Openerp como una 'lista' de elementos y opciones que usted tiene que crear y darles estilo.
+Como diseñador, su objetivo es el estilo de estos elementos con el fin de lograr un resultado maravilloso, independientemente del lugar donde el usuario final elija colocarlos.
 
-Let’s take a tour of our “list” elements:
+Vamos a hacer un recorrido de nuestra  "lista" de elementos:
 
 .. row
 
 .. figure:: theme_tutorial_assets/img/snippet.jpg
    :figclass: col-sm-6
 
-   Snippets (or building-blocks)
+   Snippets (o bloques de construcción)
 
-   A piece of HTML code.  The user  will  drag&drop, modify and combine them using our built-in Website Builder interface. You can define sets of options and styles for each snippet. The user will choose from them according to their needs.
+    Un trozo de código HTML. El usuario arrastrara y soltara, modificar y combina usando nuestra interfaz de constructocion de Sitios Web incorporada. Se puede definir conjuntos de opciones y estilos para cada snippet. El usuario deberá elegirlo de acuerdo a sus necesidades.
 
 .. figure:: theme_tutorial_assets/img/page.jpg
    :figclass: col-sm-6
 
-   Pages
+   Paginas
 
-   These are normal web pages, except that they will be editable by the final user and that you can define an empty area that the user can “fill” by dragging snippets into it.
+   Estas son páginas web normales, excepto que podrán ser modificados por el usuario final y que se pueden definir en un área vacía que el usuario puede 'llenar' arrastrando snippets en ella.
 
 .. /row
 .. raw:: html
@@ -127,16 +122,16 @@ Let’s take a tour of our “list” elements:
 .. figure:: theme_tutorial_assets/img/styles.jpg
    :figclass: col-sm-6
 
-   Styles
+   Stilos
 
-   Styles are defined using standard CSS files (or Less/Sass). You can define a style as **default** or **optional**. The default styles are always active in your theme, the optional styles can be enabled or disabled by the user.
+Los estilos se definen mediante archivos CSS estándar (o Less / Sass).  puedes definir como un estilo como **predeterminado ** u ** opcional**. Los estilos predeterminados estaran siempre activos en su tema, los estilos opcionales pueden ser activados o desactivados por el usuario.
 
 .. figure:: theme_tutorial_assets/img/functionalities.jpg
    :figclass: col-sm-6
 
-   Functionalities
+   funcionalidades
 
-   Thanks to Odoo’s modularity, everything can be personalized even more. This means there are endless possibilities for your creativity. Adding functionalities is easy and it’s simple to provide the end user with customizable options.
+   Gracias a la modularidad de Odoo, todo se pueden personalizar aún más. Esto significa que hay un sin fín de posibilidades para su creatividad. La adición de funcionalidades es fácil y es fácil de proporcionar al usuario final con opciones personalizables.
 
 .. /row
 
